@@ -1,0 +1,11 @@
+var: NumLit
+var = 999
+# a b ag eb db #
+
+if var >= 99
+    var = var + 1
+else
+    var = var - 1
+end
+
+
