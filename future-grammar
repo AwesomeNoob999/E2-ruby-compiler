@@ -1,0 +1,54 @@
+# Output_Type = Binary_Intel # % hashtags are for stating compiler settings in the file
+% percent sign is the comment char
+op infoset(name) % op can only write
+  meth EXE(...,DATE) % meth allows different implimentations of the same fun/op
+   % will change depending on compiler output
+  end
+
+    
+  meth ELF(...,DATE)
+   % will change depending on compiler output
+  end
+    
+  meth BIN(...,DATE)
+   % will change depending on compiler output 
+  end
+  
+ fun inforead(name) % fun can only read
+    tryread name.date % method 0 by default
+  end
+  
+  fun infowrite(name, age)
+    set name.age = age % this will return error
+  end
+end
+
+Day: DATE
+Day = 5/3/27
+
+modof_meth main(infoset) % modules can store many types of code, usually the name of the module will determine the classes that can access those bits of code
+end
+
+modof_op main
+end
+
+modof_fun main
+end
+
+assemble def bloon
+  assembly stuff
+end
+ 
+def puts(string) %def can both read and write
+  print string
+  tryread string
+end
+
+while true
+  print("blue")
+otherwise
+  print("how")
+  exit
+end
+
+main.infoset(Day)
